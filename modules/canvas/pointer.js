@@ -3,8 +3,9 @@ class PointerParticle {
 		this.x = x;
 		this.y = y;
 		this.speed = Math.random();
+		this.originalR = this.speed + 2;
 		this.radius = this.speed + 2;
-		this.color = "#eff7b7";
+		this.color = "transparent";
 		this.vx = 0;
 		this.vy = 0;
 
@@ -15,10 +16,10 @@ class PointerParticle {
 	}
 
 	draw(c, x, y) {
-		if (!this.x || !this.y) {
+		if (!x || !y) {
 			return;
 		}
-
+		this.color = "#eff7b7";
 		c.save();
 		c.beginPath();
 		c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -48,6 +49,30 @@ class PointerParticle {
 
 		// this.vx = (x - this.x) * this.speed;
 		// this.vy = (y - this.y) * this.speed;
+	}
+
+	clickHandler(clicked) {
+		if (clicked) {
+			this.smaller();
+		} else {
+			this.bigger();
+		}
+	}
+
+	smaller() {
+		if (this.radius >= 0.1) {
+			this.radius -= 0.1;
+		} else {
+			this.radius = 0;
+		}
+	}
+
+	bigger() {
+		if (this.radius < this.originalR) {
+			this.radius += 0.1;
+		} else {
+			this.radius = this.originalR;
+		}
 	}
 }
 

@@ -9,13 +9,14 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 const mouse = {
-	x: innerWidth / 2,
-	y: innerHeight / 2,
+	x: 0,
+	y: 0,
 };
 
 const colors = ["#2185C5", "#7ECEFD", "#f2b7ab", "#eff7b7", "#e38a8a"];
 
 let mouseDown = false;
+let clicked = false;
 
 // Implementation---------------------------------------------
 let starParticles;
@@ -99,6 +100,8 @@ function animate(t) {
 
 	// mouse pointer
 	pointerParticles.forEach((particle) => {
+		particle.clickHandler(clicked);
+
 		particle.draw(c, mouse.x, mouse.y);
 	});
 }
@@ -123,17 +126,14 @@ addEventListener("mouseup", () => {
 
 addEventListener("mousemove", (event) => {
 	mouse.x = event.clientX;
-	mouse.y = event.clientY;
+	mouse.y = event.pageY;
 });
 
 // Firework Event Listener-------------------------------------------
 addEventListener("click", (event) => {
-	mouse.x = event.clientX;
-	mouse.y = event.pageY;
-
 	const particleCount = 400;
 	const angleIncrement = (Math.PI * 2) / particleCount;
-	const power = 6;
+	const power = 5;
 
 	for (let i = 0; i < particleCount; i++) {
 		fireworkParticles.push(
@@ -143,6 +143,10 @@ addEventListener("click", (event) => {
 			})
 		);
 	}
+	clicked = true;
+	setTimeout(() => {
+		clicked = false;
+	}, 1200);
 });
 
 // Button Event Listener---------------------------------------------
