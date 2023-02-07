@@ -14,12 +14,6 @@
 	height: 100vh;
 }
 
-.text-container {
-	max-width: 50%;
-	flex-shrink: 2;
-	padding: 2rem;
-}
-
 .headline {
 	display: inline-block;
 	position: relative;
@@ -28,6 +22,14 @@
 	letter-spacing: 2px;
 	color: $night;
 	white-space: nowrap;
+}
+
+// Page1----------------------------------
+
+.text-container {
+	max-width: 50%;
+	flex-shrink: 2;
+	padding: 2rem;
 }
 
 .image-container {
@@ -45,4 +47,51 @@
 
 #about-me {
 	justify-content: space-between;
+}
+
+//Page 2---------------------------------------
+#skills {
+	background-color: #f0efed;
+}
+// Page 3---------------------------------------
+#experience {
+	flex-direction: column;
+	background: #f4aaac;
+
+	.experience-not-found {
+		position: relative;
+		text-align: center;
+		top: -2rem;
+
+		.no-experience-text {
+			position: absolute;
+			bottom: 0;
+			z-index: 2;
+			font-family: "Arial";
+			color: $dark-red;
+			font-weight: bold;
+		}
+	}
+}
+
+.wavy {
+	animation-name: wavy;
+	animation-duration: 1.3s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+@keyframes wavy {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: -15px;
+	}
+	100% {
+		top: 0px;
+	}
 }

@@ -280,12 +280,6 @@ nav ul {
   height: 100vh;
 }
 
-.text-container {
-  max-width: 50%;
-  flex-shrink: 2;
-  padding: 2rem;
-}
-
 .headline {
   display: inline-block;
   position: relative;
@@ -294,6 +288,12 @@ nav ul {
   letter-spacing: 2px;
   color: #001350;
   white-space: nowrap;
+}
+
+.text-container {
+  max-width: 50%;
+  flex-shrink: 2;
+  padding: 2rem;
 }
 
 .image-container {
@@ -312,4 +312,64 @@ nav ul {
 
 #about-me {
   justify-content: space-between;
+}
+
+#skills {
+  background-color: #f0efed;
+}
+
+#experience {
+  flex-direction: column;
+  background: #f4aaac;
+}
+#experience .experience-not-found {
+  position: relative;
+  text-align: center;
+  top: -2rem;
+}
+#experience .experience-not-found .no-experience-text {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  font-family: "Arial";
+  color: #5f0d36;
+  font-weight: bold;
+}
+
+.wavy {
+  -webkit-animation-name: wavy;
+          animation-name: wavy;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes wavy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes wavy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */

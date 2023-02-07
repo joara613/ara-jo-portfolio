@@ -16,7 +16,7 @@ canvas {
 	font-size: 3rem;
 	font-style: italic;
 	/* font-family: "Playfair Display", serif; */
-	font-family: "Lora", serif;
+	font-family: $serif;
 }
 
 .canvas__text-container span {
@@ -29,7 +29,7 @@ canvas {
 	margin-top: 1.5rem;
 	border: 2px solid $light-purple;
 
-	font-family: "Open Sans", sans-serif;
+	font-family: $sans-serif;
 	color: white;
 	background: linear-gradient(to left, transparent 50%, $light-purple 50%) right;
 	background-size: 200%;

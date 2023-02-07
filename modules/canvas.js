@@ -1,6 +1,6 @@
-import StarParticle from "./modules/star.js";
-import Firework from "./modules/firework.js";
-import PointerParticle from "./modules/pointer.js";
+import StarParticle from "./canvas/star.js";
+import Firework from "./canvas/firework.js";
+import PointerParticle from "./canvas/pointer.js";
 
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
