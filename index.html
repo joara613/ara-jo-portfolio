@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<title>Ara Jo</title>
 	</head>
@@ -46,10 +46,32 @@
 			</header>
 			<div class="top-container">
 				<div class="container" id="about-me">
-					<div class="image-container"><img src="/images/my-pic.jpeg" /></div>
+					<div
+						class="image-container"
+						data-aos="fade-right"
+						data-aos-offset="300"
+						data-aos-easing="ease-in-sine"
+						data-aos-duration="1000"
+					>
+						<img src="/images/my-pic.jpeg" />
+					</div>
 					<div class="text-container">
-						<h1 class="headline"><span>Hi, I'm Ara!</span></h1>
-						<div class="content">
+						<h1
+							class="headline"
+							data-aos="fade-left"
+							data-aos-easing="ease-in-sine"
+							data-aos-delay="600"
+							data-aos-duration="1200"
+						>
+							<span>Hi, I'm Ara!</span>
+						</h1>
+						<div
+							class="content"
+							data-aos="fade-left"
+							data-aos-easing="ease-in-sine"
+							data-aos-delay="800"
+							data-aos-duration="1200"
+						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium
 							nibh sed egestas fringilla. Suspendisse ornare quis augue at vestibulum.
 							Etiam nunc arcu, tincidunt eget lacus a, inter
@@ -57,6 +79,7 @@
 					</div>
 				</div>
 				<div class="container" id="skills">
+					<h1>Skills</h1>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium
 					nibh sed egestas fringilla. Suspendisse ornare quis augue at vestibulum.
 					Etiam nunc arcu, tincidunt eget lacus a, interdum sollicitudin purus. Donec
@@ -68,18 +91,27 @@
 				<div class="container" id="experience">
 					<div class="experience-not-found flex-column">
 						<img src="images/giphy.gif" alt="" />
-						<h1 class="no-experience-text wave">No experiece was found yet😓</h1>
+						<h1 class="no-experience-text wave">No experience was found yet 😓</h1>
 					</div>
-					<!-- 
+				</div>
+				<div class="container" id="works">
+					<h1>Works</h1>
+				</div>
+				<div class="container" id="contact">
+					<h1>Contact</h1>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium
 					nibh sed egestas fringilla. Suspendisse ornare quis augue at vestibulum.
 					Etiam nunc arcu, tincidunt eget lacus a, interdum sollicitudin purus. Donec
 					pretium purus ac mauris porta, at ultricies velit bibendum. Etiam justo
-					sapien, sollicitudin posuere lectus nec, tempor vestibulum sem. Aliquam -->
+					sapien, sollicitudin posuere lectus nec, tempor vestibulum sem. Aliquam
+					gravida tellus eros, id pretium sapien iaculis nec. Cras nulla massa,
+					congue
 				</div>
 			</div>
 		</main>
-		<script type="module" src="index.js"></script>
+		<script type="module" src="/index.js"></script>
+		<script type="module" src="/modules/canvas.js"></script>
+		<script type="module" src="/modules/utils.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
 			AOS.init();

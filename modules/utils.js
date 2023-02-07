@@ -1,4 +1,4 @@
-function waveText(text) {
+export function waveText(text) {
 	let delay = 300;
 
 	let waveEls = document.querySelectorAll(".wave");
@@ -19,7 +19,7 @@ function waveText(text) {
 	});
 }
 
-function scrollButtonHandler(el) {
+export function scrollButtonHandler(el) {
 	let height;
 	switch (el.innerHTML) {
 		case "Home":
@@ -37,6 +37,8 @@ function scrollButtonHandler(el) {
 		case "Contact":
 			height = innerHeight * 5;
 			break;
+		default:
+			height = 0;
 	}
 	window.scroll({
 		behavior: "smooth",
@@ -46,7 +48,8 @@ function scrollButtonHandler(el) {
 }
 
 // implements----------------------------------
-waveText("No experiece was found yet😓");
+let text = document.querySelector(".no-experience-text").innerHTML;
+waveText(text);
 
 let navItems = document.querySelectorAll(".nav-item");
 
