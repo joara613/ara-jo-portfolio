@@ -1,0 +1,106 @@
+header {
+	width: 100%;
+	height: 5rem;
+	/* Safari */
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+
+	background: rgb(8, 7, 43) url(https://i.ibb.co/87GbbFP/2799006.jpg) repeat 20%
+		center;
+	color: white;
+	border-bottom: solid 2px $light-blue;
+}
+
+@keyframes move-twink-back {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -10000px 5000px;
+	}
+}
+
+@keyframes move-clouds-back {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 10000px 0;
+	}
+}
+
+.stars,
+.twinkling,
+.clouds {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.stars {
+	background: rgba(4, 2, 23, 0.7) url(../../images/stars.png) repeat top center;
+	z-index: 0;
+}
+
+.twinkling {
+	background: transparent url(../../images/twinkling.png) repeat center center;
+	z-index: 1;
+	animation: move-twink-back 200s linear infinite;
+	opacity: 0.6;
+}
+
+.clouds {
+	background: transparent url(../../images/clouds.png) repeat top center;
+	z-index: 2;
+	opacity: 0.05;
+	animation: move-clouds-back 200s linear infinite;
+}
+
+nav {
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 3rem;
+}
+
+nav ul {
+	height: 100%;
+	margin: 0;
+}
+
+.nav-item {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-size: 1rem;
+	height: 5rem;
+	padding: 0 1.5rem;
+	font-family: "Open Sans", sans-serif;
+	letter-spacing: 1px;
+	z-index: 5;
+}
+
+.nav-item:hover {
+	color: $light-purple;
+	background-color: rgba(68, 95, 175, 0.3);
+}
+
+.logo {
+	z-index: 5;
+	height: 5rem;
+	font-size: 2.2rem;
+	/* font-family: "Playfair Display", serif; */
+	font-family: "Lora", serif;
+	font-style: italic;
+	color: $light-purple;
+	margin-left: 1rem;
+
+	cursor: pointer;
+	white-space: nowrap;
+}

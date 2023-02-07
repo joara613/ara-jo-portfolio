@@ -1,0 +1,48 @@
+.top-container {
+	position: relative;
+	top: -5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.container {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.text-container {
+	max-width: 50%;
+	flex-shrink: 2;
+	padding: 2rem;
+}
+
+.headline {
+	display: inline-block;
+	position: relative;
+	font-size: clamp(40px, 8vw, 80px);
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: $night;
+	white-space: nowrap;
+}
+
+.image-container {
+	display: inline-block;
+	max-width: 50vw;
+	height: 100%;
+	opacity: 0.9;
+}
+
+.image-container > img {
+	max-width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+#about-me {
+	justify-content: space-between;
+}
