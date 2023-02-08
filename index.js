@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 
 app.use(express.static(__dirname));
+app.use(express.static("/images"));
 app.use(express.static(path.join(__dirname, "/css/style.css")));
 
 app.get("/", (req, res) => {
