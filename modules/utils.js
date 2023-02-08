@@ -47,6 +47,20 @@ export function scrollButtonHandler(el) {
 	});
 }
 
+export function fadeOutEffect(targetEl) {
+	var fadeEffect = setInterval(function () {
+		if (!targetEl.style.opacity) {
+			targetEl.style.opacity = 1;
+		}
+		if (targetEl.style.opacity > 0) {
+			targetEl.style.opacity -= 0.01;
+		} else {
+			clearInterval(fadeEffect);
+			targetEl.style.display = none;
+		}
+	}, 20);
+}
+
 // implements----------------------------------
 let text = document.querySelector(".no-experience-text").innerHTML;
 waveText(text);
@@ -58,3 +72,10 @@ navItems.forEach((navItem) => {
 		scrollButtonHandler(navItem);
 	});
 });
+
+// let loadingEl = document.getElementById("loading-page");
+
+// window.onload = (event) => {
+// 	console.log("page is fully loaded");
+// 	fadeOutEffect(loadingEl);
+// };

@@ -1,4 +1,11 @@
+main {
+	position: relative;
+}
+
 .top-container {
+	// position: absolute;
+	// top: 0;
+	// z-index: -1;
 	position: relative;
 	top: -5rem;
 	display: flex;
@@ -72,4 +79,13 @@
 			font-weight: bold;
 		}
 	}
+}
+// Page4 --------------------------------------
+
+// Page 5---------------------------------------------
+#contact {
+	background-image: url("../../images/sun-rise1.jpg");
+	background-position-y: 25%;
+	background-position-x: 10%;
+	background-size: 100%;
 }
