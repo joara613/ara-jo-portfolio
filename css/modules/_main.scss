@@ -7,7 +7,7 @@ main {
 	// top: 0;
 	// z-index: -1;
 	position: relative;
-	top: -5rem;
+	// top: -5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -22,9 +22,8 @@ main {
 }
 
 .headline {
-	display: inline-block;
 	position: relative;
-	font-size: clamp(40px, 8vw, 80px);
+	font-size: 5rem;
 	font-weight: 600;
 	letter-spacing: 2px;
 	color: $night;
@@ -33,27 +32,27 @@ main {
 
 // Page1----------------------------------
 
-.text-container {
-	max-width: 50%;
-	flex-shrink: 2;
-	padding: 2rem;
-}
-
-.image-container {
-	display: inline-block;
-	max-width: 50vw;
-	height: 100%;
-	opacity: 0.9;
-}
-
-.image-container > img {
-	max-width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-
 #about-me {
 	justify-content: space-between;
+
+	.text-container {
+		max-width: 50%;
+		flex-shrink: 2;
+		padding: 2rem;
+	}
+
+	.image-container {
+		display: inline-block;
+		max-width: 50vw;
+		height: 100%;
+		opacity: 0.9;
+	}
+
+	.image-container > img {
+		max-width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
 }
 
 //Page 2---------------------------------------
@@ -88,4 +87,8 @@ main {
 	background-position-y: 25%;
 	background-position-x: 10%;
 	background-size: 100%;
+
+	&.container {
+		flex-direction: column;
+	}
 }
