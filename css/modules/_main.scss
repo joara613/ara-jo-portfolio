@@ -23,8 +23,8 @@ main {
 
 .headline {
 	position: relative;
-	font-size: 5rem;
-	font-weight: 600;
+	font-size: 4rem;
+
 	letter-spacing: 2px;
 	color: $night;
 	white-space: nowrap;
@@ -34,6 +34,11 @@ main {
 
 #about-me {
 	justify-content: space-between;
+
+	> .headline {
+		font-size: 5rem;
+		font-weight: 600;
+	}
 
 	.text-container {
 		max-width: 50%;
@@ -84,11 +89,25 @@ main {
 // Page 5---------------------------------------------
 #contact {
 	background-image: url("../../images/sun-rise1.jpg");
+	background-size: cover;
 	background-position-y: 25%;
 	background-position-x: 10%;
-	background-size: 100%;
+	// background-size: 100%;
 
-	&.container {
-		flex-direction: column;
+	flex-direction: column;
+	justify-content: end;
+
+	.contact-box {
+		width: 50%;
+		> * {
+			margin: 10px 0;
+		}
+		.contact__message {
+			font-family: sans-serif;
+			letter-spacing: 0.11rem;
+			color: #484848;
+			margin-bottom: 1rem;
+			line-height: 1.4rem;
+		}
 	}
 }

@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: "Lora", serif;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -293,8 +294,7 @@ main {
 
 .headline {
   position: relative;
-  font-size: 5rem;
-  font-weight: 600;
+  font-size: 4rem;
   letter-spacing: 2px;
   color: #001350;
   white-space: nowrap;
@@ -302,6 +302,10 @@ main {
 
 #about-me {
   justify-content: space-between;
+}
+#about-me > .headline {
+  font-size: 5rem;
+  font-weight: 600;
 }
 #about-me .text-container {
   max-width: 50%;
@@ -345,12 +349,24 @@ main {
 
 #contact {
   background-image: url("../../images/sun-rise1.jpg");
+  background-size: cover;
   background-position-y: 25%;
   background-position-x: 10%;
-  background-size: 100%;
-}
-#contact.container {
   flex-direction: column;
+  justify-content: end;
+}
+#contact .contact-box {
+  width: 50%;
+}
+#contact .contact-box > * {
+  margin: 10px 0;
+}
+#contact .contact-box .contact__message {
+  font-family: sans-serif;
+  letter-spacing: 0.11rem;
+  color: #484848;
+  margin-bottom: 1rem;
+  line-height: 1.4rem;
 }
 
 .wavy {
@@ -418,4 +434,75 @@ main {
   height: 100vh;
   width: 2rem;
   background-color: black;
+}
+
+.form-container {
+  position: relative;
+  width: 100%;
+}
+.form-container__background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0 2rem;
+  z-index: 1;
+}
+form > * {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.11rem;
+  background-color: transparent;
+}
+form > *::-moz-placeholder {
+  color: rgb(90, 90, 90);
+  font-size: 14px;
+}
+form > *:-ms-input-placeholder {
+  color: rgb(90, 90, 90);
+  font-size: 14px;
+}
+form > *::placeholder {
+  color: rgb(90, 90, 90);
+  font-size: 14px;
+}
+form input {
+  border: 0;
+  border-bottom: 1px solid #aaa;
+}
+form textarea {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  height: 5rem;
+}
+form textarea:focus,
+form input:focus {
+  outline: none;
+  border-color: #376bdb;
+  border-width: 2px;
+}
+form button {
+  height: 30px;
+  border: 0;
+  outline: 0;
+  color: white;
+  position: relative;
+  z-index: 3;
+  background: #376bdb;
+  opacity: 0.5;
+  cursor: pointer;
+}
+form button:hover {
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */
