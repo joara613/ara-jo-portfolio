@@ -28,6 +28,10 @@ main {
 	letter-spacing: 2px;
 	color: $night;
 	white-space: nowrap;
+
+	@include atSmall {
+		font-size: 2.5rem;
+	}
 }
 
 // Section1----------------------------------

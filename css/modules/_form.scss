@@ -16,8 +16,11 @@
 form {
 	width: 100%;
 	margin-bottom: 0;
-	padding: 0 2rem;
+	padding: 1rem 2rem;
 	z-index: 1;
+	@include atSmallMedium {
+		padding: 1rem 1.4rem;
+	}
 
 	> * {
 		display: block;
@@ -48,7 +51,7 @@ form {
 		border-radius: 4px;
 		height: 7rem;
 		@include atSmallMedium {
-			height: 5rem;
+			height: 6rem;
 		}
 	}
 	textarea:focus,
