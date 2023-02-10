@@ -137,7 +137,6 @@ setTimeout(() => {
 }, 200);
 
 addEventListener("scroll", (event) => {
-	console.log(scrollY);
 	if (scrollY + 500 > innerHeight) {
 		header.style.opacity = "1";
 		headerBackground.classList.add("visible");
@@ -145,5 +144,4 @@ addEventListener("scroll", (event) => {
 		header.style.opacity = "0.5";
 		headerBackground.classList.remove("visible");
 	}
-	console.log(headerBackground);
 });
