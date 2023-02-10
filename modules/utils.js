@@ -129,7 +129,7 @@ window.onload = (event) => {
 };
 
 // header disappears when scrolling down
-let header = document.getElementById("site-header");
+let header = document.querySelector(".site-header");
 let headerBackground = document.querySelector(".star-background");
 
 setTimeout(() => {
@@ -143,5 +143,18 @@ addEventListener("scroll", (event) => {
 	} else {
 		header.style.opacity = "0.5";
 		headerBackground.classList.remove("visible");
+	}
+});
+
+const navIcon = document.getElementById("nav-icon");
+let iconToggleOn = false;
+
+navIcon.addEventListener("click", () => {
+	iconToggleOn = !iconToggleOn;
+
+	if (iconToggleOn) {
+		navIcon.classList.add("open");
+	} else {
+		navIcon.classList.remove("open");
 	}
 });

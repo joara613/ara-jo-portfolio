@@ -1,17 +1,18 @@
+/* Extra small devices (phones, 600px and down) */
 @mixin atSmall {
-	@media (max-width: 480px) {
+	@media (max-width: 600px) {
 		@content;
 	}
 }
 
 @mixin atSmallMedium {
-	@media (max-width: 767px) {
+	@media (max-width: 768px) {
 		@content;
 	}
 }
-
+// 1024
 @mixin atMedium {
-	@media (max-width: 1024px) {
+	@media (max-width: 992px) {
 		@content;
 	}
 }

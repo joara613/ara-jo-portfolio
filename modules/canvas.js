@@ -114,6 +114,7 @@ addEventListener("resize", () => {
 	canvas.width = innerWidth;
 	canvas.height = innerHeight;
 
+	console.log(innerWidth);
 	init();
 });
 
@@ -163,3 +164,5 @@ viewMyWorkBtn.addEventListener("click", () => {
 		mouseDown = false;
 	}, 1000);
 });
+
+console.log(innerWidth);

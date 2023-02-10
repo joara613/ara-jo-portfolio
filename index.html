@@ -30,8 +30,7 @@
 
 		<main>
 			<header
-				id="site-header"
-				class="no-user-select"
+				class="site-header no-user-select"
 				data-aos="fade-up"
 				data-aos-duration="1000"
 			>
@@ -49,30 +48,37 @@
 						<li class="nav-item hover-underline">Works</li>
 						<li class="nav-item hover-underline">Contact</li>
 					</ul>
+					<div id="nav-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</nav>
 			</header>
 			<!-- <div class="side-bar"></div> -->
 			<section class="top-container">
-				<div class="container" id="about-me">
+				<div class="container about-me" id="about-me">
 					<div
 						class="image-container"
 						data-aos="fade-right"
 						data-aos-offset="300"
-						data-aos-easing="ease-in"
+						data-aos-easing="ease-in-sine"
 						data-aos-duration="1000"
+						once="true"
 					>
-						<img src="/images/mypic.jpg" />
+						<img src="images/mypic.jpg" />
 					</div>
 					<div class="text-container">
-						<h1
+						<div
 							class="headline"
 							data-aos="fade-left"
-							data-aos-easing="ease-in"
+							data-aos-easing="ease-in-sine"
 							data-aos-delay="600"
-							data-aos-duration="1200"
+							data-aos-duration="1000"
 						>
 							<span>Hi, I'm Ara!</span>
-						</h1>
+						</div>
 						<div
 							class="content"
 							data-aos="fade-left"
@@ -86,8 +92,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="container" id="skills">
-					<h1>Skills</h1>
+				<div class="container skills" id="skills">
+					<div class="headline">Skills</div>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium
 					nibh sed egestas fringilla. Suspendisse ornare quis augue at vestibulum.
 					Etiam nunc arcu, tincidunt eget lacus a, interdum sollicitudin purus. Donec
@@ -96,22 +102,25 @@
 					gravida tellus eros, id pretium sapien iaculis nec. Cras nulla massa,
 					congue
 				</div>
-				<div class="container" id="experience">
+				<div class="container experience" id="experience">
 					<div class="experience-not-found flex-column">
+						<div class="headline">Experience</div>
 						<img src="images/giphy.gif" alt="" />
-						<h1 class="no-experience-text wave">No experience was found yet 😓</h1>
+						<h1 class="no-experience-text wave">
+							No experience was found yet 😓 바꿀예정
+						</h1>
 					</div>
 				</div>
-				<div class="container" id="works">
-					<h1>Works</h1>
+				<div class="container works" id="works">
+					<div class="headline">Works</div>
 				</div>
-				<div class="container" id="contact">
+				<div class="container contact" id="contact">
 					<div class="flex-column contact-box">
 						<div class="headline">Get in touch</div>
 						<div class="contact__message">
 							Feel free to reach out to get to know more! Working together or being
-							friends, I'm open for knowing new friends. Contact me by the form below
-							or email me at joara613@gmail.com.
+							friends, I'm open for knowing new people. Contact me by the form below or
+							email me at <b>joara613@gmail.com</b>.
 						</div>
 						<div class="form-container flex-column">
 							<div class="form-container__background"></div>
