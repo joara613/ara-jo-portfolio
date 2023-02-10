@@ -12,8 +12,8 @@ canvas {
 	width: 30rem;
 	color: white;
 	font-size: 3rem;
-	font-style: italic;
-	font-family: $serif;
+	// font-style: italic;
+	font-family: "Figtree", sans-serif;
 
 	@include atSmall {
 		font-size: 2rem;

@@ -110,15 +110,15 @@ init();
 animate();
 
 // Event Listeners---------------------------------------------------
-addEventListener("resize", () => {
-	if (innerWidth > 600) {
+if (innerWidth > 600) {
+	addEventListener("resize", () => {
 		canvas.width = innerWidth;
 		canvas.height = innerHeight;
 
 		init();
-	}
-	console.log(innerWidth);
-});
+		console.log(innerWidth);
+	});
+}
 
 addEventListener("mousedown", () => {
 	mouseDown = true;
