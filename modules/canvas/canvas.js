@@ -1,12 +1,15 @@
-import StarParticle from "./canvas/star.js";
-import Firework from "./canvas/firework.js";
-import PointerParticle from "./canvas/pointer.js";
+import StarParticle from "./star.js";
+import Firework from "./firework.js";
+import PointerParticle from "./pointer.js";
 
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+const canvasWidth = innerWidth;
+const canvasHeight = innerHeight;
+
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
 
 const mouse = {
 	x: 0,

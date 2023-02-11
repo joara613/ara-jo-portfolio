@@ -5,6 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<title>Ara Jo</title>
 	</head>
@@ -47,16 +54,13 @@
 						<li class="nav-item hover-underline">Experience</li>
 						<li class="nav-item hover-underline">Works</li>
 						<li class="nav-item hover-underline">Contact</li>
+						<li class="nav-item hover-underline menu-icon">
+							<i class="fa-solid fa-bars"></i>
+						</li>
 					</ul>
-					<div id="nav-icon">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
 				</nav>
 			</header>
-			<!-- <div class="side-bar"></div> -->
+
 			<section class="top-container">
 				<div class="container about-me" id="about-me">
 					<div
@@ -102,15 +106,78 @@
 						</div>
 					</div>
 				</div>
-				<div class="container skills" id="skills">
-					<div class="headline">Skills</div>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium
-					nibh sed egestas fringilla. Suspendisse ornare quis augue at vestibulum.
-					Etiam nunc arcu, tincidunt eget lacus a, interdum sollicitudin purus. Donec
-					pretium purus ac mauris porta, at ultricies velit bibendum. Etiam justo
-					sapien, sollicitudin posuere lectus nec, tempor vestibulum sem. Aliquam
-					gravida tellus eros, id pretium sapien iaculis nec. Cras nulla massa,
-					congue
+				<div class="container skills" id="contact">
+					<div class="flex-column inner-container">
+						<div class="headline">Skills</div>
+						<div class="skill-set-container flex-column">
+							<div class="white-background"></div>
+							<ul class="skill-set flex-column">
+								<li class="skill flex-column">
+									<div class="skill-icon__icon">
+										<i class="fa-brands fa-html5"></i>
+									</div>
+									<div class="skill-icon__name">HTML5</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon"><i class="fa-brands fa-css3"></i></div>
+									<div class="skill-icon__name">CSS3</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon"><i class="fa-brands fa-js"></i></div>
+									<div class="skill-icon__name">JavaScript</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon"><i class="fa-brands fa-php"></i></div>
+									<div class="skill-icon__name">PHP</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon"><i class="fa-brands fa-sass"></i></div>
+									<div class="skill-icon__name">SASS</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon">
+										<i class="fa-brands fa-wordpress-simple"></i>
+									</div>
+									<div class="skill-icon__name">Wordpress</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon"><i class="fa-brands fa-react"></i></div>
+									<div class="skill-icon__name">React</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon"><i class="fa-brands fa-github"></i></div>
+									<div class="skill-icon__name">Git Hub</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon">
+										<i class="fa-brands fa-node-js"></i>
+									</div>
+									<div class="skill-icon__name">Node.js</div>
+								</li>
+								<li class="skill flex-column">
+									<div class="skill-icon__icon"><i class="fa-brands fa-python"></i></div>
+									<div class="skill-icon__name">Python</div>
+								</li>
+							</ul>
+							<div class="skill-plus">
+								<div class="skill-plus__text">And a little bit of</div>
+								<ul class="skill-set flex-column">
+									<li class="skill flex-column">
+										<div class="skill-icon__icon">
+											<i class="fa-brands fa-figma"></i>
+										</div>
+										<div class="skill-icon__name">Pigma</div>
+									</li>
+									<li class="skill flex-column">
+										<div class="skill-icon__icon">
+											<img src="/icons/illustrator.png" alt="" />
+										</div>
+										<div class="skill-icon__name">Illustrator</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="container experience" id="experience">
 					<div class="experience-not-found flex-column">
