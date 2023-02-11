@@ -388,6 +388,7 @@ main {
 
 .about-me {
   flex-direction: row;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .about-me {

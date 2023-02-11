@@ -59,7 +59,7 @@ main {
 
 .about-me {
 	flex-direction: row;
-	// justify-content: space-between;
+	justify-content: space-between;
 
 	@include atSmallMedium {
 		flex-direction: column;
