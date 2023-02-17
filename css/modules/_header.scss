@@ -58,6 +58,9 @@
 		color: $light-purple;
 		background-color: rgba(68, 95, 175, 0.3);
 	}
+	.menu-icon:hover {
+		background-color: transparent;
+	}
 
 	.menu-icon {
 		display: none;
