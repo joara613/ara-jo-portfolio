@@ -10,8 +10,6 @@
 	}
 
 	.image-container {
-		// display: inline-block;
-		// width: 40vw;
 		max-width: 40%;
 		height: 100%;
 		opacity: 0.9;
@@ -38,10 +36,10 @@
 
 	.text-container {
 		max-width: 60%;
-		padding: 4rem;
+		padding: 10%;
 
 		@include atLarge {
-			padding: 2rem;
+			padding: 3rem;
 		}
 		@include atSmallMedium {
 			max-width: 100%;
@@ -80,7 +78,7 @@
 		color: #484848;
 		line-height: 2rem;
 		margin-top: 1rem;
-		padding-left: 2rem;
+		// padding-left: 2rem;
 
 		@include atLarge {
 			font-size: 1rem;
@@ -93,6 +91,7 @@
 		@include atSmall {
 			font-size: 14px;
 			padding: 0;
+			line-height: 1.3rem;
 		}
 	}
 }

@@ -91,7 +91,7 @@ Neutralizing Antibody Assay
 				<li>
 			Assisted preparation of the autopsy of commissioned animals
 				</li>`;
-			jobLocationEl.innerHTML = "Yang, South Korea";
+			jobLocationEl.innerHTML = "Yanyang, South Korea";
 			changeOpacity(1);
 			break;
 	}
