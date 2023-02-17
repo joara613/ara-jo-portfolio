@@ -106,10 +106,15 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="container skills" id="contact">
 					<div class="flex-column inner-container">
 						<div class="headline">Skills</div>
-						<div class="skill-set-container flex-column">
+						<div
+							class="skill-set-container flex-column"
+							data-aos="fade-up"
+							data-aos-duration="1000"
+						>
 							<div class="white-background"></div>
 							<ul class="skill-set flex-column">
 								<li class="skill flex-column">
@@ -180,16 +185,45 @@
 					</div>
 				</div>
 				<div class="container experience" id="experience">
-					<div class="experience-not-found flex-column">
+					<div
+						class="flex-column inner-container experience-container"
+						data-aos="fade"
+						data-aos-easing="ease-in"
+					>
 						<div class="headline">Experience</div>
-						<img src="images/giphy.gif" alt="" />
-						<h1 class="no-experience-text wave">
-							No experience was found yet 😓 바꿀예정
-						</h1>
+						<div class="height80 flex-column">
+							<div class="company">
+								<div class="company__list">
+									<button class="company__name">company1</button>
+									<button class="company__name">Equity Health Services</button>
+									<button class="company__name">Maple Bear Canada Inc.</button>
+									<button class="company__name">Histogenetics</button>
+									<button class="company__name">Animal & Plant Quarantine Agency</button>
+								</div>
+								<div class="company__detail">
+									<div class="company__detail-box">
+										<div class="job-title"></div>
+										<div class="flex-btw">
+											<div class="job-period"></div>
+											<div class="job-location"></div>
+										</div>
+
+										<ul class="job-detail-list">
+											<li class="job-detail"></li>
+											<li class="job-detail"></li>
+											<li class="job-detail"></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="container works" id="works">
-					<div class="headline">Works</div>
+					<div class="flex-column inner-container">
+						<div class="headline">Work</div>
+						<div class="height80"></div>
+					</div>
 				</div>
 				<div class="container contact" id="contact">
 					<div class="flex-column contact-box">
@@ -197,11 +231,12 @@
 						<div class="contact__message">
 							Feel free to reach out to get to know more! Working together or being
 							friends, I'm open for knowing new people. Contact me by the form below or
-							email me at <b>joara613@gmail.com</b>.
+							email me at <a class="open-email"><b>joara613@gmail.com</b></a
+							>.
 						</div>
 						<div class="form-container flex-column">
 							<div class="form-container__background"></div>
-							<form action="/">
+							<form action="/" method="post" name="emailForm">
 								<input name="name" type="text" placeholder="name" />
 								<input name="email" type="email" placeholder="email" />
 								<input name="subject" type="text" placeholder="subject" />

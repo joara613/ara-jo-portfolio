@@ -1,0 +1,56 @@
+//Section 2---------------------------------------Skills
+.skills {
+	background-color: #f0efed;
+
+	.skill-set-container {
+		position: relative;
+		width: 100%;
+		margin-top: 2rem;
+
+		.white-background {
+			z-index: 0;
+		}
+		.skill-set {
+			z-index: 1;
+		}
+	}
+
+	.skill-set {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.skill {
+		width: 100px;
+		height: 100px;
+		font-family: $sans-serif;
+		color: #484848;
+
+		> * {
+			display: block;
+		}
+		& :first-child {
+			font-size: 2rem;
+		}
+		& :nth-child(2) {
+			font-size: 14px;
+		}
+	}
+	.skill-plus {
+		margin-top: 1rem;
+		z-index: 1;
+
+		&__text {
+			font-family: $sans-serif;
+			color: $light-purple;
+		}
+		ul {
+			color: #484848;
+		}
+		img {
+			width: 2rem;
+			height: 2rem;
+			opacity: 0.7;
+		}
+	}
+}
