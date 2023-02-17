@@ -3,28 +3,24 @@
 	flex-direction: column;
 	background: #f4aaac;
 
-	.height80 {
-		background-color: rgba(255, 255, 255, 0.1);
-	}
+	// .experience-container {
+	// 	width: 60%;
+	// 	height: 100%;
 
-	.experience-container {
-		width: 60%;
-		height: 100%;
+	// 	@include atLarge {
+	// 		width: 70%;
+	// 	}
 
-		@include atLarge {
-			width: 70%;
-		}
-
-		@include atMedium {
-			width: 80%;
-		}
-		@include atSmall {
-			width: 90%;
-		}
-		> * {
-			margin: 10px 0;
-		}
-	}
+	// 	@include atMedium {
+	// 		width: 80%;
+	// 	}
+	// 	@include atSmall {
+	// 		width: 90%;
+	// 	}
+	// 	> * {
+	// 		margin: 10px 0;
+	// 	}
+	// }
 
 	.company {
 		font-family: $sans-serif;

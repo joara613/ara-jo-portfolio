@@ -66,3 +66,22 @@ main {
 	display: flex;
 	justify-content: space-between;
 }
+
+.width60 {
+	width: 60%;
+	height: 100%;
+
+	@include atLarge {
+		width: 70%;
+	}
+
+	@include atMedium {
+		width: 80%;
+	}
+	@include atSmall {
+		width: 90%;
+	}
+	> * {
+		margin: 10px 0;
+	}
+}
