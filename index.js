@@ -17,6 +17,10 @@ app.get("/music-player", function (req, res) {
 	res.render("pages/music-player");
 });
 
+app.get("/joke-teller", function (req, res) {
+	res.render("pages/joke-teller");
+});
+
 // app
 // 	.route("/")
 // 	.get((req, res) => {
