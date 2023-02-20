@@ -1,0 +1,78 @@
+.form-container {
+	position: relative;
+	width: 100%;
+
+	&__background {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		opacity: 0.5;
+		z-index: 0;
+	}
+}
+
+form {
+	width: 100%;
+	margin-bottom: 0;
+	padding: 1rem 2rem;
+	z-index: 1;
+	@include atSmallMedium {
+		padding: 1rem 1.4rem;
+	}
+
+	> * {
+		display: block;
+		width: 100%;
+		margin-top: 2rem;
+		font-size: 16px;
+		font-family: $sans-serif;
+		letter-spacing: 0.11rem;
+		background-color: transparent;
+		@include atSmallMedium {
+			font-size: 14px;
+		}
+
+		&::placeholder {
+			color: rgb(90, 90, 90);
+			font-size: 16px;
+			@include atSmallMedium {
+				font-size: 14px;
+			}
+		}
+	}
+	input {
+		border: 0;
+		border-bottom: 1px solid #aaa;
+	}
+	textarea {
+		border: 1px solid #aaa;
+		border-radius: 4px;
+		height: 7rem;
+		@include atSmallMedium {
+			height: 6rem;
+		}
+	}
+	textarea:focus,
+	input:focus {
+		outline: none;
+		border-color: $light-blue;
+		border-width: 2px;
+	}
+
+	button {
+		height: 30px;
+		border: 0;
+		outline: 0;
+		color: white;
+		position: relative;
+		z-index: 3;
+		background: $light-blue;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+	button:hover {
+		opacity: 0.7;
+	}
+}
