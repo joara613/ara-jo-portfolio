@@ -13,6 +13,10 @@ app.get("/", function (req, res) {
 	res.render("pages/index");
 });
 
+app.get("/music-player", function (req, res) {
+	res.render("pages/music-player");
+});
+
 // app
 // 	.route("/")
 // 	.get((req, res) => {

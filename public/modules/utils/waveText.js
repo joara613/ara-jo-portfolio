@@ -1,25 +1,35 @@
-export function waveText(text) {
+export function waveText(waveEl) {
 	let delay = 300;
 
-	let waveEls = document.querySelectorAll(".wave");
+	let text = waveEl.innertext;
 
-	waveEls.forEach((waveEl) => {
-		waveEl.innerHTML = text
-			.split("")
-			.map((letter) => {
-				return `<span>` + letter + `</span>`;
-			})
-			.join("");
+	waveEl.innerHTML = text
+		.split("")
+		.map((letter) => {
+			return `<span>` + letter + `</span>`;
+		})
+		.join("");
 
-		Array.from(waveEl.children).forEach((span, index) => {
-			setTimeout(() => {
-				span.classList.add("wavy");
-			}, index * 60 + delay);
-		});
+	Array.from(waveEl.children).forEach((span, index) => {
+		setTimeout(() => {
+			span.classList.add("wavy");
+		}, index * 60 + delay);
+	});
+}
+
+export function waveIcon(waveEl) {
+	let delay = 300;
+
+	Array.from(waveEl.children).forEach((span, index) => {
+		setTimeout(() => {
+			span.classList.add("wavy");
+		}, index * 60 + delay);
 	});
 }
 
 // implements----------------------------------
+const scrollDownBtns = document.querySelectorAll(".scroll-down-btn");
 
-let text = document.querySelector(".no-experience-text").innerHTML;
-waveText(text);
+scrollDownBtns.forEach((btn) => {
+	waveIcon(btn);
+});

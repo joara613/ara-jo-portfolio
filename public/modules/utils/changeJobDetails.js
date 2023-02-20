@@ -24,6 +24,23 @@ companyBtnEls.forEach((el, selectedIndex) => {
 // functions
 function changeContent(index) {
 	switch (index) {
+		case 0:
+			jobTitleEl.innerHTML = "Inventory Clerk (produce department)";
+			jobPeriodEl.innerHTML = "January 2023 - Current";
+			detailListEl.innerHTML = `
+				<li class="job-detail">
+					Monitored and maintained current inventory levels
+				</li>
+				<li class="job-detail">
+					Received, unpacked, and delivered goods; re-stocked items as necessary
+				</li>
+				<li class="job-detail">
+				<i>Currently looking for web developer position</i>
+				</li>`;
+			jobLocationEl.innerHTML = "Calgary, Canada";
+
+			changeOpacity(1);
+			break;
 		case 1:
 			jobTitleEl.innerHTML = "Data Entry Specialist";
 			jobPeriodEl.innerHTML = "November 2021 - June 2022";

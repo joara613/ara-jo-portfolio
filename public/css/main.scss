@@ -4,15 +4,19 @@
 @import "base/_variables";
 @import "base/_baseline";
 
-// modules
-@import "modules/_canvas";
-@import "modules/_header";
-@import "modules/_main";
-@import "modules/_effect";
-@import "modules/_menu-page";
-@import "modules/_sec1-about-me";
-@import "modules/_sec2-skills";
-@import "modules/_sec3-experience";
-@import "modules/_sec4-work";
-@import "modules/_sec5-contact";
-@import "modules/_form";
+// page modules
+@import "page_modules/_canvas";
+@import "page_modules/_header";
+@import "page_modules/_main";
+@import "page_modules/_menu-page";
+@import "page_modules/_loading-page";
+@import "page_modules/_sec1-about-me";
+@import "page_modules/_sec2-skills";
+@import "page_modules/_sec3-experience";
+@import "page_modules/_sec4-work";
+@import "page_modules/_sec5-contact";
+@import "page_modules/_form";
+
+// effect modules
+@import "modules/_wavy-font";
+@import "modules/_scroll-down-btn";

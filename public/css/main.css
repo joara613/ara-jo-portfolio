@@ -113,7 +113,7 @@ canvas {
 .canvas__text-container {
   width: 30rem;
   color: white;
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-family: "Figtree", sans-serif;
 }
 @media (max-width: 600px) {
@@ -129,7 +129,7 @@ canvas {
 .view-my-work {
   font-size: large;
   padding: 10px 40px;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   border: 2px solid #cac5e1;
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -424,73 +424,6 @@ main {
   margin: 10px 0;
 }
 
-.wavy {
-  -webkit-animation-name: wavy;
-          animation-name: wavy;
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-@-webkit-keyframes wavy {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: -15px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-@keyframes wavy {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: -15px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-#loading-page {
-  position: fixed;
-  z-index: 101;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow-x: hidden;
-  height: 100vh;
-  background-color: white;
-}
-#loading-page h2 {
-  position: relative;
-  top: -3rem;
-  color: #e38a8a;
-  font-family: "Lora", serif;
-}
-
-.side-bar {
-  position: -webkit-sticky;
-  position: sticky;
-  display: inline-block;
-  top: -5rem;
-  right: 0;
-  z-index: 99;
-  height: 100vh;
-  width: 2rem;
-  background-color: black;
-}
-
 .menu-page {
   position: fixed;
   top: -100%;
@@ -527,6 +460,24 @@ main {
 }
 .mobile-menu__item:nth-child(5) {
   background-color: #855f37;
+}
+
+#loading-page {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: white;
+}
+#loading-page h2 {
+  position: relative;
+  top: -3rem;
+  color: #e38a8a;
+  font-family: "Lora", serif;
 }
 
 .about-me {
@@ -746,15 +697,16 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 .experience .company__detail-box > * {
-  margin-top: 1rem;
+  margin: 0.5rem 0;
 }
 @media (max-width: 600px) {
   .experience .company__detail-box {
     justify-content: center;
     padding: 1.2rem;
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
   .experience .company__detail-box > * {
     margin-top: 0.5rem;
@@ -823,11 +775,58 @@ main {
   }
 }
 
+.works .width95 {
+  width: 95%;
+  height: 100%;
+  padding: 0.5rem;
+}
+.works .width95 > * {
+  margin: 10px 0;
+}
 .works .work-container {
   width: 100%;
   height: 100%;
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow-y: scroll;
 }
+.works .work-container > * {
+  margin: 1rem;
+}
+.works .work-container .work {
+  position: relative;
+  width: 20%;
+}
+.works .work-container .work > img {
+  width: 100%;
+  pointer-events: none;
+}
+.works .work-container .work__detail-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(170, 198, 236, 0.855);
+  color: white;
+  word-break: break-word;
+  font-family: "Open Sans", sans-serif;
+  visibility: hidden;
+}
+.works .work-container .work__detail-page > * {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.works .work-container .work__detail-page .work__name {
+  font-family: "Figtree", sans-serif;
+  font-size: 1.4rem;
+}
+.works .work-container .work__detail-page .used-skill-set {
+  display: flex;
+  justify-content: space-around;
+}
+
 .contact {
   background-image: url("../../images/sun-rise1.jpg");
   background-size: cover;
@@ -974,4 +973,65 @@ form button {
 }
 form button:hover {
   opacity: 0.7;
+}
+
+.wavy {
+  -webkit-animation-name: wavy;
+          animation-name: wavy;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes wavy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes wavy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.scroll-down-btn-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 80px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.scroll-down-btn-container:hover .scroll-down-btn {
+  color: #376bdb;
+  transform: scale(1.1);
+}
+
+.scroll-down-btn {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #cac5e1;
+  transition: all 0.5s ease-out;
 }/*# sourceMappingURL=main.css.map */
