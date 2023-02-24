@@ -1,0 +1,13 @@
+// Global
+@import "base/_variables";
+@import "base/_baseline";
+
+// Third party
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dancing+Script:wght@600&family=Space+Grotesk&display=swap");
+
+// Parts
+@import "parts/_hero";
+@import "parts/_header";
+@import "parts/_card";
+@import "parts/_effect";
+@import "parts/_footer";

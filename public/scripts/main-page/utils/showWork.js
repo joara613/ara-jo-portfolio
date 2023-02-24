@@ -1,7 +1,7 @@
 function showWork(el) {
 	if (el.id) {
 		let route = el.id;
-		window.open(`/${route}`, "_blank");
+		window.open(`/works/${route}`, "_blank");
 	}
 }
 

@@ -1,0 +1,151 @@
+<%- include('../partials/_head',{title:"Template", route:"template",aos:true})
+%>
+<header>
+	<!-- logo -->
+	<div
+		class="logo-container"
+		data-aos="fade-zoom-in"
+		data-aos-easing="ease-out"
+		data-aos-delay="500"
+		data-aos-duration="1500"
+	>
+		<img src="/images/template/logo.png" />
+	</div>
+	<div
+		class="menu-icon-container"
+		data-aos="fade-zoom-in"
+		data-aos-easing="ease-out"
+		data-aos-delay="500"
+		data-aos-duration="1500"
+	>
+		<i class="menu-icon fa-solid fa-bars"></i>
+	</div>
+</header>
+
+<div class="hero">
+	<nav class="nav" data-aos="fade-right" data-aos-duration="1000">
+		<ul class="nav__ul">
+			<% navItems.forEach(item=>{ %>
+			<li class="nav__list">
+				<div class="nav__item">
+					<a href="#" class="nav__item-name"><%= item.name %> </a>
+					<% if(item.dropdown.length){%>
+					<i class="dropdown-icon fa-solid fa-angle-right"></i>
+					<% }%>
+				</div>
+				<% if(item.dropdown.length){%>
+				<div class="dropdown-content">
+					<% item.dropdown.forEach(dropdownItem=>{%>
+					<a href="#" class="dropdown-single"><%= dropdownItem %></a>
+					<%});%>
+				</div>
+				<% } %>
+			</li>
+			<% });%>
+		</ul>
+	</nav>
+	<div class="slogan">
+		<div>Let's Make</div>
+		<div>Our Life</div>
+		<div>More <span>Beautiful</span></div>
+		<button class="btn-gray">
+			With Us <i class="fa-solid fa-arrow-right"></i>
+		</button>
+	</div>
+	<!-- background image -->
+	<div class="img-container">
+		<img src="/images/template/flower.jpg" />
+		<div class="overlay"></div>
+	</div>
+</div>
+
+<section class="two-items-showcase">
+	<div class="card-section">
+		<div class="card-list">
+			<div class="card">
+				<a class="card-link" href="#">
+					<div class="card__img-holder">
+						<img src="/images/template/img1.jpg" alt="" />
+					</div>
+					<div class="card-wrapper">
+						<div class="card__content">
+							<div class="card__tag">Tag</div>
+							<span class="card__title">Card Title</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="card">
+				<a class="card-link" href="#">
+					<div class="card__img-holder">
+						<img src="/images/template/img2.jpg" alt="" />
+					</div>
+					<div class="card-wrapper">
+						<div class="card__content">
+							<div class="card__tag">Tag</div>
+							<span class="card__title">Card Title</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="card">
+				<a class="card-link" href="#">
+					<div class="card__img-holder">
+						<img src="/images/template/img3.jpg" alt="" />
+					</div>
+					<div class="card-wrapper">
+						<div class="card__content">
+							<div class="card__tag">Tag</div>
+							<span class="card__title">Card Title</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="card">
+				<a class="card-link" href="#">
+					<div class="card__img-holder">
+						<img src="/images/template/img4.jpg" alt="" />
+					</div>
+					<div class="card-wrapper">
+						<div class="card__content">
+							<div class="card__tag">Tag</div>
+							<span class="card__title">Card Title</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<button class="btn-gray">Book with us</button>
+	</div>
+</section>
+
+<footer>
+	<div class="footer-menu">
+		<div class="footer-menu__headline">Join Our Team</div>
+		<div class="footer-menu__content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro commodi,
+			possimus fugiat accusantium dignissimos consectetur incidunt atque
+			repellendus tempora aliquid nesciunt facere dolores modi pariatur architecto
+			sed qui eveniet omnis!
+		</div>
+	</div>
+	<div class="footer-menu">
+		<div class="footer-menu__headline">Lorem ipsum</div>
+		<div class="footer-menu__content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro commodi,
+			possimus fugiat accusantium dignissimos consectetur incidunt atque
+			repellendus tempora aliquid nesciunt facere dolores modi pariatur architecto
+			sed qui eveniet omnis!
+		</div>
+	</div>
+	<div class="footer-menu">
+		<div class="footer-menu__headline">Get Social</div>
+		<ul class="footer-menu__content">
+			<li><a>Facebook</a></li>
+			<li><a>Instagram</a></li>
+		</ul>
+	</div>
+</footer>
+
+<%- include('../partials/_foot',{title:"Template", route:"template",aos:true})
+%>

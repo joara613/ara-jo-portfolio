@@ -1,28 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="/css/main-page/style.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<title>Ara Jo Portfolio</title>
-	</head>
-	<body>
+<%- include('../partials/_head',{title:"Ara Jo Portfolio", route:"main-page",aos:true}) %>
+
 		<!-- loading page -->
 		<div class="flex-column" id="loading-page">
 			<img src="/images/main-page/loading.svg" />
 			<h2>Loading...</h2>
 		</div>
-		<!-- Menu page -->
-		<div class="menu-page" id="menu-page">
+		<!-- Mobile Menu page -->
+		<div class="mobile-menu-page" id="menu-page">
 			<div class="mobile-menu__item">Home</div>
 			<div class="mobile-menu__item">About</div>
 			<div class="mobile-menu__item">Experience</div>
@@ -111,53 +95,20 @@
 						>
 							<div class="white-background"></div>
 							<ul class="skill-set flex-column">
+
+							<!-- skills -->
+							<% icons.forEach((icon)=>{ %>
 								<li class="skill flex-column">
 									<div class="skill-icon__icon">
-										<i class="fa-brands fa-html5"></i>
+										<i class="fa-brands <%= icon.class%>"></i>
 									</div>
-									<div class="skill-icon__name">HTML5</div>
+									<div class="skill-icon__name"><%= icon.name%></div>
 								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon"><i class="fa-brands fa-css3"></i></div>
-									<div class="skill-icon__name">CSS3</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon"><i class="fa-brands fa-js"></i></div>
-									<div class="skill-icon__name">JavaScript</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon"><i class="fa-brands fa-php"></i></div>
-									<div class="skill-icon__name">PHP</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon"><i class="fa-brands fa-sass"></i></div>
-									<div class="skill-icon__name">SASS</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon">
-										<i class="fa-brands fa-wordpress-simple"></i>
-									</div>
-									<div class="skill-icon__name">Wordpress</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon"><i class="fa-brands fa-react"></i></div>
-									<div class="skill-icon__name">React</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon"><i class="fa-brands fa-github"></i></div>
-									<div class="skill-icon__name">Git Hub</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon">
-										<i class="fa-brands fa-node-js"></i>
-									</div>
-									<div class="skill-icon__name">Node.js</div>
-								</li>
-								<li class="skill flex-column">
-									<div class="skill-icon__icon"><i class="fa-brands fa-python"></i></div>
-									<div class="skill-icon__name">Python</div>
-								</li>
+							<% });%>
+		
 							</ul>
+
+							<!-- skill plus -->
 							<div class="skill-plus">
 								<div class="skill-plus__text">And a little bit of</div>
 								<ul class="skill-set flex-column">
@@ -230,38 +181,29 @@
 						<div class="headline">Works</div>
 						<div class="height80">
 							<div class="work-container">
-								<!-- 1 -->
-								<div class="work">
+
+								<!-- works -->
+								<% works.forEach((work)=>{ %>
+									<div class="work">
+									<% if(work.withSound){ %>
 									<div class="audio-icon"><i class="fa-solid fa-music"></i></div>
-									<img src="/images/main-page/music-player2.gif" alt="" />
+									<% } %>
+									<img src= <%= work.img %> />
 									<div class="work__detail-page flex-column">
-										<div class="work__name">Music Player</div>
+										<div class="work__name"><%= work.name %></div>
 										<div class="used-skill-set">
-											<button class="used-skill">HTML5</button>
-											<button class="used-skill">Javascript</button>
+											<% work.skills.forEach((skill)=>{ %>
+											<button class="used-skill"><%= skill %></button>
+											<% })%>
 										</div>
 										<div class="work__btns">
-											<button class="view-live" id="music-player">View Live</button>
+											<button class="view-live" id=<%= work.id%>>View Live</button>
 											<button class="view-git">Show Code</button>
 										</div>
 									</div>
 								</div>
-								<!-- 1 -->
-								<div class="work">
-									<div class="audio-icon"><i class="fa-solid fa-music"></i></div>
-									<img src="/images/main-page/joke-teller2.gif" alt="" />
-									<div class="work__detail-page flex-column">
-										<div class="work__name">Joke Teller</div>
-										<div class="used-skill-set">
-											<button class="used-skill">APIs</button>
-											<button class="used-skill">Javascript</button>
-										</div>
-										<div class="work__btns">
-											<button class="view-live" id="joke-teller">View Live</button>
-											<button class="view-git">Show Code</button>
-										</div>
-									</div>
-								</div>
+								<% }); %>
+
 							</div>
 						</div>
 					</div>
@@ -296,10 +238,11 @@
 				</div>
 			</section>
 		</main>
-		<script type="module" src="/scripts/main-page/app.js"></script>
+		<%- include('../partials/_foot',{title:"Ara Jo Portfolio", route:"main-page",aos:true}) %>
+		<!-- <script type="module" src="/scripts/main-page/index.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
 			AOS.init();
 		</script>
 	</body>
-</html>
+</html> -->

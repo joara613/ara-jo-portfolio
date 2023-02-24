@@ -1,0 +1,192 @@
+<header>
+	<!-- mobile-menu-btn -->
+	<button class="menu-btn">
+		<i class="nav-icon menu-icon fa-solid fa-bars"></i>
+	</button>
+	<!-- logo -->
+	<a class="logo-link" href="#"><h1 class="logo">Logo</h1></a>
+	<!-- nav -->
+	<nav class="nav">
+		<!-- nav-items -->
+		<ul class="nav__main">
+			<% navItems.forEach(item=>{ %>
+			<li class="nav__list">
+				<div class="nav__list-item">
+					<a href="#"><%= item.name %> </a>
+					<% if(item.dropdown.length){%>
+					<i class="dropdown-icon fa-solid fa-angle-down"></i>
+					<% }%>
+				</div>
+				<% if(item.dropdown.length){%>
+				<div class="dropdown-content">
+					<% item.dropdown.forEach(dropdownItem=>{%>
+					<a href="#" class="dropdown-single"><%= dropdownItem %></a>
+					<%});%>
+				</div>
+				<% } %>
+			</li>
+			<% });%>
+		</ul>
+		<!-- nav-icons -->
+		<div class="nav__icon-container">
+			<a class="user-link" href="#"
+				><i class="nav-icon user-icon fa-regular fa-user"></i
+			></a>
+			<a href="#"
+				><i class="nav-icon search-icon fa-solid fa-magnifying-glass"></i
+			></a>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<!-- showcase -->
+	<section class="showcase">
+		<!-- showcase-left -->
+		<div class="main-showcase">
+			<a href="#">
+				<img src="/images/template/flower.jpg" />
+			</a>
+			<div class="main-showcase__inside-card">
+				<div class="card">
+					<a class="card-link" href="#">
+						<div class="card-wrapper">
+							<div class="card__content">
+								<div class="card__tag"><span>Tag</span></div>
+								<div class="card__title">Card Title</div>
+								<p class="card-description">
+									Lorem Ipsum is simply dummy text of the printing and typesetting
+									industry. Lorem Ipsum has been the industry's standard dummy text ever
+									since the 1500s, when an unknown printer took a galley of type and
+									scrambled it to make a type specimen book.
+								</p>
+								<div class="sub-text">
+									<span>GET THE RECIPE</span>
+									<i class="fa-solid fa-chevron-right"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- showcase-right -->
+		<div class="side-showcase">
+			<div class="card-section">
+				<div class="section-header">
+					<a href="#" class="section-title title-underline">
+						<span>The NYE Appetizer Spread</span>
+						<i class="arrow-icon fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
+				<!-- card list -->
+				<div class="card-list">
+					<div class="card">
+						<a class="card-link" href="#">
+							<div class="card__header">
+								<div class="card__img-holder">
+									<img
+										src="https://www.simplyrecipes.com/thmb/IG8Q4SxxfEF6Ix-JZXxVvE9vg-Y=/300x200/filters:max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Clam-Dip-LEAD-6-91ea6cc014044323a806fc0a1e614018.jpg"
+										alt=""
+									/>
+								</div>
+							</div>
+							<div class="card-wrapper">
+								<div class="card__content">
+									<div class="card__tag">Tag</div>
+									<span class="card__title">Card Title</span>
+								</div>
+								<div class="card__footer">
+									<span class="meta-text">10hrs</span>
+									<div class="star-rating">Stars</div>
+								</div>
+							</div>
+						</a>
+						<div class="card__hovering-effect"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="three-sections-showcase">
+		<div class="card-section">
+			<div class="section-header">
+				<a href="#" class="section-title title-underline">
+					<span>The NYE Appetizer Spread</span>
+					<i class="arrow-icon fa-solid fa-arrow-right"></i>
+				</a>
+			</div>
+			<div class="card-list">
+				<div class="card">
+					<a class="card-link" href="#">
+						<div class="card__header">
+							<div class="card__img-holder">
+								<img
+									src="https://www.simplyrecipes.com/thmb/IG8Q4SxxfEF6Ix-JZXxVvE9vg-Y=/300x200/filters:max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Clam-Dip-LEAD-6-91ea6cc014044323a806fc0a1e614018.jpg"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="card-wrapper">
+							<div class="card__content">
+								<div class="card__tag">Tag</div>
+								<span class="card__title">Card Title</span>
+							</div>
+							<div class="card__footer">
+								<span class="meta-text">10hrs</span>
+								<div class="star-rating">Stars</div>
+							</div>
+						</div>
+					</a>
+					<div class="card__hovering-effect"></div>
+				</div>
+				<div class="card">
+					<a class="card-link" href="#">
+						<div class="card__header">
+							<div class="card__img-holder">
+								<img
+									src="https://www.simplyrecipes.com/thmb/IG8Q4SxxfEF6Ix-JZXxVvE9vg-Y=/300x200/filters:max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Clam-Dip-LEAD-6-91ea6cc014044323a806fc0a1e614018.jpg"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="card-wrapper">
+							<div class="card__content">
+								<div class="card__tag">Tag</div>
+								<span class="card__title">Card Title</span>
+							</div>
+							<div class="card__footer">
+								<span class="meta-text">10hrs</span>
+								<div class="star-rating">Stars</div>
+							</div>
+						</div>
+					</a>
+					<div class="card__hovering-effect"></div>
+				</div>
+				<div class="card">
+					<a class="card-link" href="#">
+						<div class="card__header">
+							<div class="card__img-holder">
+								<img
+									src="https://www.simplyrecipes.com/thmb/IG8Q4SxxfEF6Ix-JZXxVvE9vg-Y=/300x200/filters:max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Clam-Dip-LEAD-6-91ea6cc014044323a806fc0a1e614018.jpg"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="card-wrapper">
+							<div class="card__content">
+								<div class="card__tag">Tag</div>
+								<span class="card__title">Card Title</span>
+							</div>
+							<div class="card__footer">
+								<span class="meta-text">10hrs</span>
+								<div class="star-rating">Stars</div>
+							</div>
+						</div>
+					</a>
+					<div class="card__hovering-effect"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
