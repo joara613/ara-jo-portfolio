@@ -170,6 +170,11 @@ section {
 .hero .slogan > * {
   margin-bottom: 1.5rem;
 }
+@media (max-width: 480px) {
+  .hero .slogan > * {
+    margin-bottom: 1rem;
+  }
+}
 .hero .slogan > div {
   font-size: 5rem;
   letter-spacing: 2px;
@@ -183,7 +188,15 @@ section {
 }
 @media (max-width: 767px) {
   .hero .slogan > div {
-    font-size: 3.2rem;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero .slogan > div {
+    font-size: 2.6rem;
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: inline-block;
   }
 }
 .hero .slogan > div span {
@@ -236,12 +249,6 @@ header .menu-icon-container {
   header .menu-icon-container {
     display: flex;
   }
-}
-header .menu-icon-container:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-header .menu-icon-container:active {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 header .menu-icon-container:active .menu-icon {
   color: #ffd977;

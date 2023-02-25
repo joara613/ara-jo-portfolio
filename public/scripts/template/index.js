@@ -19,11 +19,10 @@ navItemEls.forEach((el) => {
 });
 
 addEventListener("scroll",()=>{
-	if(scrollY+100 >innerHeight){
+	if (scrollY + 100 > innerHeight || innerWidth < 767) {
 		logoContainer.style.backgroundColor = "transparent";
 		headerEl.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-
-	}else{
+	} else {
 		logoContainer.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 		headerEl.style.backgroundColor = "transparent";
 	}
