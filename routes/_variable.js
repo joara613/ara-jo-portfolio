@@ -28,7 +28,7 @@ const works = [
 		name: "Template",
 		id: "template",
 		img: "/images/main-page/template2.gif",
-		skills: ["Scss", "Javascript"],
+		skills: ["SCSS", "Javascript"],
 		withSound: false,
 		github: "",
 	},

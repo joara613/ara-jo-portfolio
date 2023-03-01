@@ -4,8 +4,10 @@ export function scrollButtonHandler(el) {
 
 	if (el.dataset.nextpage) {
 		text = el.dataset.nextpage;
-	} else {
+	} else if (el.innerHTML) {
 		text = el.innerHTML;
+	} else{
+		text = el;
 	}
 
 	switch (text) {

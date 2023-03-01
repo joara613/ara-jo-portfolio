@@ -233,11 +233,15 @@
 						</div>
 						<div class="form-container flex-column">
 							<div class="form-container__background"></div>
-							<form action="/" method="post" name="emailForm">
-								<input name="name" type="text" placeholder="name" />
-								<input name="email" type="email" placeholder="email" />
-								<input name="subject" type="text" placeholder="subject" />
-								<textarea name="content" placeholder="email content"></textarea>
+							<form id="contact-form" action="https://formsubmit.co/joara613@gmail.com" method="POST" name="emailForm">
+								<input name="name" type="text" placeholder="name" required />
+								<input type="email" name="email" placeholder="Email Address" required>
+								<!-- <input type="hidden" name="_subject" value="New submission!"> -->
+								<input type="text" name="_subject" placeholder="subject" required>
+								<input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
+								<input type="hidden" name="_autoresponse" value="Thank you for your email! I received your email successfully and will reply you as soon as possible.">
+								<textarea name="message" placeholder="email content" required></textarea>
+								<input type="hidden" name="_next" value="http://localhost:3000/#conatct">
 								<button>Send</button>
 							</form>
 						</div>
@@ -245,11 +249,5 @@
 				</div>
 			</section>
 		</main>
+
 		<%- include('../partials/_foot',{title:"Ara Jo Portfolio", route:"main-page",aos:true}) %>
-		<!-- <script type="module" src="/scripts/main-page/index.js"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script>
-			AOS.init();
-		</script>
-	</body>
-</html> -->
