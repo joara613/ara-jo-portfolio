@@ -9,5 +9,3 @@ const wasFormSubmitted = localStorage.getItem("contactForm");
 if (wasFormSubmitted) {
 	contactForm.innerHTML = `<h1 class="form-submitted-msg">The email was sent successfully.</h1>`;
 }
-
-contactForm.innerHTML = `<h1 class="form-submitted-msg">The email was sent successfully.</h1>`;
