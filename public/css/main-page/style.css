@@ -426,7 +426,7 @@ main {
 
 .mobile-menu-page {
   position: fixed;
-  top: -100%;
+  top: -120%;
   background-color: #001350;
   width: 100%;
   height: 100vh;

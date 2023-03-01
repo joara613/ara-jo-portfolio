@@ -23,7 +23,7 @@ menuItemEls.forEach((el) => {
 function pageToggleHandler() {
 	if (isPageOn) {
 		// close the page
-		menuPage.style.top = "-100%";
+		menuPage.style.top = "-120%";
 		headerBackground.style.display = "block";
 		logo.style.display = "visible";
 		menuIcon.classList.remove("fa-xmark");
