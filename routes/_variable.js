@@ -19,7 +19,7 @@ const works = [
 	{
 		name: "Light Dark Mode",
 		id: "light-dark-mode",
-		img: "/images/main-page/joke-teller2.gif",
+		img: "/images/main-page/light-dark-mode.gif",
 		skills: ["CSS", "Javascript"],
 		withSound: false,
 		github: "",
@@ -27,7 +27,7 @@ const works = [
 	{
 		name: "Template",
 		id: "template",
-		img: "/images/main-page/joke-teller2.gif",
+		img: "/images/main-page/template2.gif",
 		skills: ["Scss", "Javascript"],
 		withSound: false,
 		github: "",

@@ -1,11 +1,34 @@
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const nav = document.getElementById("nav");
-const toggleIcon = document.getElementById("toggle-icon");
 const image1 = document.getElementById("image1");
 const image2 = document.getElementById("image2");
 const image3 = document.getElementById("image3");
 const textBox = document.getElementById("text-box");
+const toggleText = document.querySelector(".toggle-text");
+const modeIcon = document.getElementById("mode-icon");
 
+const menuIcon = document.getElementById("mobile-menu-icon");
+const menuPage = document.querySelector(".mobile-menu");
+const menuItemEls = document.querySelectorAll(".mobile-menu__item");
+
+let isMenuPageOn = false;
+
+// EventListener
+toggleSwitch.addEventListener("change", switchTheme);
+
+menuIcon.addEventListener("click", () => {
+	pageToggleHandler();
+});
+
+menuItemEls.forEach((el) => {
+	el.addEventListener("click", () => {
+		pageToggleHandler();
+		let id = el.innerHTML.toLowerCase();
+		window.open(`/works/light-dark-mode#${id}`, "_self");
+	});
+});
+
+// Dark-light mode setting change
 function toggleDarkLightMode(mode) {
 	let isDark = 0;
 	isDark = mode == "dark" ? true : false;
@@ -14,24 +37,24 @@ function toggleDarkLightMode(mode) {
 		? "rgb(0 0 0 /50%)"
 		: "rgb(255 255 255 /50%)";
 	textBox.style.backgroundColor = isDark
-		? "rgb(255 255 255/ 50%)"
+		? "rgb(255 255 255/ 60%)"
 		: "rgb(0 0 0 /50%)";
-	toggleIcon.children[0].textContent = isDark ? "Dark Mode" : "Light Mode";
+	toggleText.textContent = isDark ? "Dark Mode" : "Light Mode";
+
 	isDark
-		? toggleIcon.children[1].classList.replace("fa-sun", "fa-moon")
-		: toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
+		? modeIcon.classList.replace("fa-sun", "fa-moon")
+		: modeIcon.classList.replace("fa-moon", "fa-sun");
 	isDark ? imageMode("dark") : imageMode("light");
 }
 
 // Dark or Light Images
-function imageMode(color) {
-	image1.src = `/images/light-dark-mode/undraw_proud_coder_${color}.svg`;
-	image2.src = `/images/light-dark-mode/undraw_feeling_proud_${color}.svg`;
-	image3.src = `/images/light-dark-mode/undraw_conceptual_idea_${color}.svg`;
+function imageMode(mode) {
+	image1.src = `/images/light-dark-mode/undraw_detailed_examination_${mode}.svg`;
+	image2.src = `/images/light-dark-mode/undraw_website_setup_${mode}.svg`;
+	image3.src = `/images/light-dark-mode/undraw_sharing_knowledge_${mode}.svg`;
 }
 
-// Switch Theme Dynamically
-// docuementElement is <html>
+// Switch Theme
 function switchTheme(event) {
 	if (event.target.checked) {
 		document.documentElement.setAttribute("data-theme", "dark");
@@ -43,8 +66,6 @@ function switchTheme(event) {
 		toggleDarkLightMode("light");
 	}
 }
-// Event Listener
-toggleSwitch.addEventListener("change", switchTheme);
 
 // Check local storage for theme
 const currentTheme = localStorage.getItem("theme");
@@ -54,4 +75,26 @@ if (currentTheme) {
 		toggleSwitch.checked = true;
 		toggleDarkLightMode("dark");
 	}
+}
+
+function pageToggleHandler() {
+	if (isMenuPageOn) {
+		// close the page
+		menuItemEls.forEach((item) => {
+			item.style.transform = "translateX(-100vw)";
+		});
+		setTimeout(() => (menuPage.style.left = "-100%"), 1000);
+		
+		menuIcon.children[0].classList.remove("fa-xmark");
+		menuIcon.children[0].classList.add("fa-bars");
+	} else {
+		// open the page
+		menuPage.style.left = "0";
+		menuItemEls.forEach((item) => {
+			item.style.transform = "translateX(0)";
+		});
+		menuIcon.children[0].classList.add("fa-xmark");
+		menuIcon.children[0].classList.remove("fa-bars");
+	}
+	isMenuPageOn = !isMenuPageOn;
 }
