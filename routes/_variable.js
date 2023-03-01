@@ -6,7 +6,6 @@ const works = [
 		img: "/images/main-page/music-player2.gif",
 		skills: ["HTML5", "Javascript"],
 		withSound: true,
-		github: "",
 	},
 	{
 		name: "Joke Teller",
@@ -14,7 +13,6 @@ const works = [
 		img: "/images/main-page/joke-teller2.gif",
 		skills: ["APIs", "Javascript"],
 		withSound: true,
-		github: "",
 	},
 	{
 		name: "Light Dark Mode",
@@ -22,15 +20,13 @@ const works = [
 		img: "/images/main-page/light-dark-mode.gif",
 		skills: ["CSS", "Javascript"],
 		withSound: false,
-		github: "",
 	},
 	{
-		name: "Template",
-		id: "template",
-		img: "/images/main-page/template2.gif",
+		name: "Sample Site",
+		id: "sample-site",
+		img: "/images/main-page/sample-site.gif",
 		skills: ["SCSS", "Javascript"],
 		withSound: false,
-		github: "",
 	},
 ];
 

@@ -6,9 +6,9 @@ const { works, navItems } = variable;
 
 works.forEach((work) => {
 	switch (work.id) {
-		case "template":
-			router.get("/template", function (req, res) {
-				res.render("pages/template", { navItems });
+		case "sample-site":
+			router.get("/sample-site", function (req, res) {
+				res.render("pages/sample-site", { navItems });
 			});
 			break;
 		default:

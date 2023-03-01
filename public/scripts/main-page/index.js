@@ -8,7 +8,7 @@ import "./utils/changeJobDetails.js";
 import "./utils/menuPage.js";
 import "./utils/waveText.js";
 import "./utils/overlay.js";
-import "./utils/showWork.js";
+import "./utils/showPage.js";
 import "./utils/formSubmitted.js";
 
 // open email app
